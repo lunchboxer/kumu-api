@@ -1,0 +1,14 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "localMongo": {
+    "host": "localhost",
+    "database": "schooltools",
+    "password": "",
+    "name": "localMongo",
+    "user": "",
+    "connector": "mongodb"
+  }
+}

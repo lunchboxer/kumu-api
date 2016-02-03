@@ -1,0 +1,34 @@
+{
+  "name": "StudentGroup",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "term": {
+      "type": "belongsTo",
+      "model": "Term",
+      "foreignKey": ""
+    },
+    "students": {
+      "type": "hasAndBelongsToMany",
+      "model": "Student",
+      "foreignKey": ""
+    },
+    "learningSessions": {
+      "type": "hasAndBelongsToMany",
+      "model": "LearningSession",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

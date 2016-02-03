@@ -1,0 +1,44 @@
+{
+  "name": "LearningSession",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "beginTime": {
+      "type": "date",
+      "required": true
+    },
+    "endTime": {
+      "type": "date",
+      "required": true
+    },
+    "location": {
+      "type": "string"
+    },
+    "reaction": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "teachers": {
+      "type": "hasAndBelongsToMany",
+      "model": "Teacher",
+      "foreignKey": ""
+    },
+    "studentGroups": {
+      "type": "hasAndBelongsToMany",
+      "model": "StudentGroup",
+      "foreignKey": ""
+    },
+    "lesson": {
+      "type": "belongsTo",
+      "model": "Lesson",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,53 @@
+{
+  "name": "Lesson",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "order": {
+      "type": "number"
+    },
+    "lessonPlan": {
+      "type": "string"
+    },
+    "slides": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "lessonNotes": {
+      "type": "hasMany",
+      "model": "LessonNote",
+      "foreignKey": ""
+    },
+    "term": {
+      "type": "belongsTo",
+      "model": "Term",
+      "foreignKey": ""
+    },
+    "teacher": {
+      "type": "belongsTo",
+      "model": "Teacher",
+      "foreignKey": ""
+    },
+    "targetStudentGroups": {
+      "type": "hasAndBelongsToMany",
+      "model": "StudentGroup",
+      "foreignKey": ""
+    },
+    "learningSessions": {
+      "type": "hasMany",
+      "model": "LearningSession",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

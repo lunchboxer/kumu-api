@@ -1,0 +1,50 @@
+{
+  "name": "Student",
+  "plural": "Students",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "EnglishName": {
+      "type": "string",
+      "required": true
+    },
+    "ChineseName": {
+      "type": "string",
+      "required": true
+    },
+    "id": {
+      "type": "number",
+      "id": true,
+      "required": true,
+      "description": "Unique number from student ID card."
+    },
+    "gender": {
+      "type": "string",
+      "required": false,
+      "description": "'m' for male, 'f' for female"
+    },
+    "birthdate": {
+      "type": "date",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "studentGroups": {
+      "type": "hasAndBelongsToMany",
+      "model": "StudentGroup",
+      "foreignKey": ""
+    },
+    "classes": {
+      "type": "hasMany",
+      "model": "Class",
+      "foreignKey": "",
+      "through": "Seating"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

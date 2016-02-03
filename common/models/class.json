@@ -1,0 +1,35 @@
+{
+  "name": "Class",
+  "plural": "Classes",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "grade": {
+      "type": "string",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "term": {
+      "type": "belongsTo",
+      "model": "Term",
+      "foreignKey": ""
+    },
+    "students": {
+      "type": "hasMany",
+      "model": "Student",
+      "foreignKey": "",
+      "through": "Seating"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

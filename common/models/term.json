@@ -1,0 +1,37 @@
+{
+  "name": "Term",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "beginDate": {
+      "type": "date",
+      "required": true
+    },
+    "endDate": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "lessons": {
+      "type": "hasMany",
+      "model": "Lesson",
+      "foreignKey": ""
+    },
+    "classes": {
+      "type": "hasMany",
+      "model": "Class",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

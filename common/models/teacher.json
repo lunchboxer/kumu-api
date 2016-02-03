@@ -1,0 +1,38 @@
+{
+  "name": "Teacher",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "givenName": {
+      "type": "string",
+      "required": true
+    },
+    "surname": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "lessonNotes": {
+      "type": "hasMany",
+      "model": "LessonNote",
+      "foreignKey": "authorId"
+    },
+    "lessons": {
+      "type": "hasMany",
+      "model": "Lesson",
+      "foreignKey": ""
+    },
+    "learningSessions": {
+      "type": "hasAndBelongsToMany",
+      "model": "LearningSession",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
