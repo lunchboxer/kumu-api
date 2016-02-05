@@ -1,6 +1,6 @@
 {
   "name": "schooled",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "main": "server/server.js",
   "scripts": {
     "start": "node .",
@@ -22,8 +22,8 @@
     "jshint": "^2.5.6"
   },
   "repository": {
-    "type": "",
-    "url": ""
+    "type": "git",
+    "url": "https://github.com/lunchboxer/Schooled.git"
   },
   "description": "schooled"
 }
