@@ -1,12 +1,12 @@
 {
-  "name": "schooled",
-  "description": "schooled",
+  "name": "kumu",
+  "description": "kumu",
   "main": "server/server.js",
   "authors": [
     "lunchboxer <zixingchepeng@163.com>"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/lunchboxer/Schooled",
+  "homepage": "https://github.com/lunchboxer/kumu",
   "moduleType": [],
   "private": true,
   "ignore": [
