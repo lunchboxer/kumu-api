@@ -1,6 +1,7 @@
 {
   "name": "kumu",
   "version": "0.0.1",
+  "license": "MIT",
   "main": "server/server.js",
   "scripts": {
     "start": "node .",
@@ -19,7 +20,8 @@
     "serve-favicon": "^2.0.1"
   },
   "devDependencies": {
-    "jshint": "^2.5.6"
+    "jshint": "^2.5.6",
+    "node-sass": "^3.4.2"
   },
   "repository": {
     "type": "git",

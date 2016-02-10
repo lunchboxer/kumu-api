@@ -8,8 +8,7 @@ angular
     $stateProvider
       .state('welcome', {
         url: '',
-        templateUrl: 'views/welcome.html',
-        controller: 'TodoController'
+        templateUrl: 'views/welcome.html'
       });
 
     $urlRouterProvider.otherwise('welcome');

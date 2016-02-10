@@ -1,3 +1,19 @@
+@font-face {
+  font-family: action-jackson;
+  src: url(../fonts/action-jackson.regular.ttf);
+}
+
 body {
-  padding-top: 50px
+  padding-top: 50px;
+  background-color: #333;
+  color: #FFF;
+}
+
+h1 {
+  color: #FCDF15;
+}
+
+.logo {
+  font-family: action-jackson;
+  font-size: 7em;
 }
