@@ -1,0 +1,21 @@
+<section>
+  <h2>Log in</h2>
+  <form name="form" ng-submit="login()">
+
+      <div class="row">
+        <label>Email</label>
+        <input type="text" ng-model="user.email">
+        <p class="hint" ng-show="form.email.$error.required && submitted">Email is
+            required</p>
+
+        <label>Password</label>
+        <input type="password" ng-model="user.password">
+        <p class="hint" ng-show="form.password.$error.required && submitted">
+            Password is required</p>
+      </div>
+
+      <div class="actions">
+        <button class="button-primary">Login</button>
+      </div>
+  </form>
+<section>

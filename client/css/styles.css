@@ -9,11 +9,18 @@ body {
   color: #FFF;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   color: #FCDF15;
 }
 
 .logo {
   font-family: action-jackson;
-  font-size: 7em;
+  font-size: 3em;
+}
+
+input {
+  color: #333;
 }
