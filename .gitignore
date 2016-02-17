@@ -18,3 +18,5 @@ coverage
 node_modules
 npm-debug.log
 client/vendor
+dev_notes.txt
+arc-manager.json
