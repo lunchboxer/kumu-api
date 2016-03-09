@@ -161,7 +161,40 @@ module.exports = function(app) {
 
                       console.log('Created sample LearningSessions with related lessons');
 
-                    });
+                      var WeeklySchedule = app.models.WeeklySchedule;
+                      WeeklySchedule.create([
+                        { "name": "Spring 2016 default",
+                          "term": Terms[1],
+                          "teacher": Teachers[0]
+                        }
+                      ], function(err, WeeklySchedules) {
+                        if (err) throw err;
+
+                        console.log('Created sample WeeklySchedule')
+
+                        var ScheduleItem = app.models.ScheduleItem;
+                        var starttime = new Date(0,0,0,13,40)
+                        var endtime = new Date(0,0,0,14,20)
+                        ScheduleItem.create([
+                          { "day": 1,
+                            "start": starttime,
+                            "end": endtime,
+                            "weeklySchedule": WeeklySchedules[0],
+                            "studentGroups" : StudentGroups[0]
+                          }
+                        ], function(err, SchedulesItems) {
+                        if (err) throw err;
+
+                        console.log('Created sample ScheduleItem')
+                        console.log('\n -- Sample-models completed -- \n');
+
+                        });// ScheduleItem.create()
+
+
+                      }); // WeeklySchedule.create()
+
+
+                    }); // LearningSessions.create()
 
                   }); // LessonNote.create()
                 }); //Lesson.create()

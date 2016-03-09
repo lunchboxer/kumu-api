@@ -1,39 +1,34 @@
 {
-  "name": "Term",
+  "name": "ScheduleItem",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "name": {
-      "type": "string",
+    "day": {
+      "type": "number",
       "required": true
     },
-    "beginDate": {
+    "start": {
       "type": "date",
       "required": true
     },
-    "endDate": {
+    "end": {
       "type": "date",
       "required": true
     }
   },
   "validations": [],
   "relations": {
-    "lessons": {
-      "type": "hasMany",
-      "model": "Lesson",
-      "foreignKey": ""
-    },
-    "classes": {
-      "type": "hasMany",
-      "model": "Class",
-      "foreignKey": ""
-    },
-    "weeklySchedules": {
-      "type": "hasMany",
+    "weeklySchedule": {
+      "type": "belongsTo",
       "model": "WeeklySchedule",
+      "foreignKey": ""
+    },
+    "studentGroups": {
+      "type": "hasAndBelongsToMany",
+      "model": "StudentGroup",
       "foreignKey": ""
     }
   },

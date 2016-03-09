@@ -67,5 +67,13 @@
   "Seating": {
     "dataSource": "localMongo",
     "public": true
+  },
+  "WeeklySchedule": {
+    "dataSource": "localMongo",
+    "public": true
+  },
+  "ScheduleItem": {
+    "dataSource": "localMongo",
+    "public": true
   }
 }

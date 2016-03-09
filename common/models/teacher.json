@@ -31,6 +31,11 @@
       "type": "hasAndBelongsToMany",
       "model": "LearningSession",
       "foreignKey": ""
+    },
+    "weeklySchedules": {
+      "type": "hasMany",
+      "model": "WeeklySchedule",
+      "foreignKey": ""
     }
   },
   "acls": [],

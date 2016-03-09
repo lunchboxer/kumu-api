@@ -1,5 +1,5 @@
 {
-  "name": "Term",
+  "name": "WeeklySchedule",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -9,31 +9,23 @@
     "name": {
       "type": "string",
       "required": true
-    },
-    "beginDate": {
-      "type": "date",
-      "required": true
-    },
-    "endDate": {
-      "type": "date",
-      "required": true
     }
   },
   "validations": [],
   "relations": {
-    "lessons": {
-      "type": "hasMany",
-      "model": "Lesson",
+    "term": {
+      "type": "belongsTo",
+      "model": "Term",
       "foreignKey": ""
     },
-    "classes": {
-      "type": "hasMany",
-      "model": "Class",
+    "teacher": {
+      "type": "belongsTo",
+      "model": "Teacher",
       "foreignKey": ""
     },
-    "weeklySchedules": {
+    "scheduleItems": {
       "type": "hasMany",
-      "model": "WeeklySchedule",
+      "model": "ScheduleItem",
       "foreignKey": ""
     }
   },
