@@ -20,3 +20,4 @@ npm-debug.log
 client/vendor
 dev_notes.txt
 arc-manager.json
+bower_components
