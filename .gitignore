@@ -18,6 +18,6 @@ coverage
 node_modules
 npm-debug.log
 client/vendor
-dev_notes.txt
+dev_notes.md
 arc-manager.json
 bower_components
