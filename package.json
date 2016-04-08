@@ -4,13 +4,14 @@
   "license": "MIT",
   "main": "server/server.js",
   "scripts": {
-    "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\"",
+    "start": "concurrently \"npm run tsc:w\" \"npm run nodemon\" \"gulp\"",
+    "nodemon": "nodemon ./server/server.js localhost 3000 --ignore client/",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
-    "lite": "lite-server",
     "typings": "typings",
-    "postinstall": "typings install",
+    "postinstall": "typings install && build",
     "lb-ng": "lb-ng ./server/server.js ./client/src/app/lb-services.ts -l angular2",
+    "build": "gulp copylibs",
     "console": "loopback-console ."
   },
   "dependencies": {
@@ -25,14 +26,17 @@
     "loopback-component-explorer": "^2.1.0",
     "loopback-connector-mongodb": "^1.13.3",
     "loopback-datasource-juggler": "^2.46.0",
+    "nodemon": "^1.9.1",
     "rxjs": "5.0.0-beta.2",
+    "serve-favicon": "^2.0.1",
     "systemjs": "0.19.25",
-    "zone.js": "0.6.6",
-    "serve-favicon": "^2.0.1"
+    "zone.js": "0.6.6"
   },
   "devDependencies": {
     "concurrently": "^2.0.0",
-    "lite-server": "^2.1.0",
+    "gulp": "^3.9.0",
+    "gulp-watch": "^4.3.5",
+    "gulp-webserver": "^0.9.1",
     "loopback-console": "^0.2.2",
     "loopback-sdk-angular": "github:qeti/loopback-sdk-angular#188-angular2-support",
     "loopback-sdk-angular-cli": "github:qeti/loopback-sdk-angular-cli#37-angular2-support",

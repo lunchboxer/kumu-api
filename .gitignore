@@ -19,5 +19,5 @@ node_modules
 npm-debug.log
 dev_notes.md
 arc-manager.json
-client/build
+client/build/lib
 typings
