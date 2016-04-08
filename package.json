@@ -4,25 +4,40 @@
   "license": "MIT",
   "main": "server/server.js",
   "scripts": {
-    "start": "node .",
-    "pretest": "jshint .",
+    "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\"",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "lite": "lite-server",
+    "typings": "typings",
+    "postinstall": "typings install",
+    "lb-ng": "lb-ng ./server/server.js ./client/src/app/lb-services.ts -l angular2",
     "console": "loopback-console ."
   },
   "dependencies": {
+    "angular2": "2.0.0-beta.14",
     "bcrypt": "^0.8.5",
     "compression": "^1.0.3",
     "cors": "^2.5.2",
+    "es6-promise": "^3.1.2",
+    "es6-shim": "^0.35.0",
     "loopback": "^2.22.0",
     "loopback-boot": "^2.18.0",
     "loopback-component-explorer": "^2.1.0",
     "loopback-connector-mongodb": "^1.13.3",
     "loopback-datasource-juggler": "^2.46.0",
+    "rxjs": "5.0.0-beta.2",
+    "systemjs": "0.19.25",
+    "zone.js": "0.6.6",
     "serve-favicon": "^2.0.1"
   },
   "devDependencies": {
-    "jshint": "^2.5.6",
+    "concurrently": "^2.0.0",
+    "lite-server": "^2.1.0",
     "loopback-console": "^0.2.2",
-    "node-sass": "^3.4.2"
+    "loopback-sdk-angular": "github:qeti/loopback-sdk-angular#188-angular2-support",
+    "loopback-sdk-angular-cli": "github:qeti/loopback-sdk-angular-cli#37-angular2-support",
+    "typescript": "^1.8.9",
+    "typings": "^0.7.12"
   },
   "repository": {
     "type": "git",
