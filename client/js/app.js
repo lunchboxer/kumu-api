@@ -28,7 +28,7 @@ angular
         templateUrl: 'views/dashboard.html',
         // controller: 'DashboardController'
         authenticate: true
-      })
+      });
     $urlRouterProvider.otherwise('welcome');
   }])
   .run(['$rootScope', '$state', function($rootScope, $state) {
