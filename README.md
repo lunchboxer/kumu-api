@@ -12,4 +12,15 @@ This branch is for setting up a foundation using angular 2 instead. It will emul
 
 ## Install
 
-Only source files are commited to the repo, so compilation and copying will need to be done before it can be used. In particular lb-ng will complain if favicons aren't copied over first.
+First, install dependencies by entering the following from a terminal inside this directory:
+```
+$ npm install
+```
+Then get the files ready to run:
+```
+$ npm run build
+```
+Now all is ready. To launch development servers reloading on any relevant changes run:
+```
+$ npm start
+```
