@@ -1,11 +1,10 @@
 <h1 class="logo">Kumu</h1>
 
-<section>
+<nav>
+  <a [routerLink]="['About']">About</a>
+  <a [routerLink]="['Students']">Students</a>
+  <a [routerLink]="['Classes']">Classes</a>
+  <a [routerLink]="['Lessons']">Lessons</a>
+</nav>
 
-  <h2>Teaching Tools</h2>
-
-  <p>Kumu is a toolbox for teachers which seeks to integrate related tools to provide new possibilities. By combining presentation tools with student data tracking, the teacher is empowered to provide students with instant feedback, and track student progess in real time.</p>
-
-  <p>"Kumu" is a Hawaiian word for teacher.</p>
-
-</section>
+<router-outlet></router-outlet>
