@@ -20,4 +20,5 @@ npm-debug.log
 dev_notes.md
 arc-manager.json
 client/build/lib
+client/build/app
 typings

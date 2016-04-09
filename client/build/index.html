@@ -3,10 +3,33 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>This is super static</title>
-    <link rel="stylesheet" href="/css/styles.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <title>Kumu teaching tools</title>
+
+    <link rel="icon" type="image/png" href="images/favicons-32x32.png" size="32x32">
+    <link rel="icon" type="image/png" href="images/favicons-16x16.png" size="16x16">
+
+    <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <script src="lib/js/es6-shim.min.js"></script>
+    <script src="lib/js/system-polyfills.js"></script>
+    <script src="lib/js/angular2-polyfills.js"></script>
+    <script src="lib/js/system.src.js"></script>
+    <script src="lib/js/Rx.js"></script>
+    <script src="lib/js/angular2.dev.js"></script>
+    <!-- 2. Configure SystemJS -->
+    <script>
+      System.config({
+        packages: {
+          app: {
+            format: 'register',
+            defaultExtension: 'js'
+          }
+        }
+      });
+      System.import('app/main')
+            .then(null, console.error.bind(console));
+    </script>
   </head>
   <body>
-     <h1>This is so static</h1>
+    <my-app>Loading...</my-app>
   </body>
 </html>
