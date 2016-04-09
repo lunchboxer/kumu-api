@@ -8,7 +8,13 @@ In it's current development state, it is a loopback installation with data struc
 
 ## Angular 2
 
-This branch is for setting up a foundation using angular 2 instead. It will emulate the methods used in [Qeti project](https://github.com/Qeti/Qeti). And explained in this [StackOverflow question](http://stackoverflow.com/questions/34843235/is-it-possible-to-generate-services-for-angular2-from-loopback).
+This branch is for setting up a foundation using angular 2 instead. It emulates many of the techniques used in [Qeti project](https://github.com/Qeti/Qeti). And explained in this [StackOverflow question](http://stackoverflow.com/questions/34843235/is-it-possible-to-generate-services-for-angular2-from-loopback).
+
+[This issue](https://github.com/angular/angular/issues/4902) is the motivation for the hack inserted at the top of each .ts file currently:
+```
+ ///<reference path="../../../node_modules/angular2/typings/browser.d.ts"/>
+```
+This keeps the transcompiler from complaining too much about typings while we are developing. This will likely not be neccesary in future versions of Angular2 beta.
 
 ## Install
 
@@ -16,7 +22,7 @@ First, install dependencies by entering the following from a terminal inside thi
 ```
 $ npm install
 ```
-Then get the files ready to run:
+Then, get the files ready to run:
 ```
 $ npm run build
 $ npm run lb-ng
