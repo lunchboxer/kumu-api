@@ -12,7 +12,7 @@ gulp.task('copylibs', function() {
       'node_modules/rxjs/bundles/Rx.js',
       'node_modules/angular2/bundles/angular2.dev.js'
     ])
-    .pipe(gulp.dest('client/lib'));
+    .pipe(gulp.dest('client/build/lib/js'));
 });
 
 gulp.task('webserver', function() {
