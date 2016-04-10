@@ -1,0 +1,7 @@
+<h2>Students</h2>
+<p>There are {{count}}</p>
+<ul>
+  <li *ngFor="#student of studentlist">
+    {{student.id}} - {{student.EnglishName}} ({{student.ChineseName}})
+  </li>
+</ul>
