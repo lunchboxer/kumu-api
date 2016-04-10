@@ -20,7 +20,7 @@
     "serve-favicon": "^2.0.1"
   },
   "devDependencies": {
-    "loopback-console": "^0.2.2",
+    "loopback-console": "^0.2.2"
   },
   "repository": {
     "type": "git",
