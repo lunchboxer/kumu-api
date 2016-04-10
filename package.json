@@ -6,9 +6,14 @@
   "scripts": {
     "start": "node .",
     "console": "loopback-console .",
-    "postinstall": "bower install"
+    "postinstall": "gulp build",
+    "dev": "concurrently nodemon gulp",
+    "lb-ng": "lb-ng ./server/server.js ./client/js/services/lb-services.js"
   },
   "dependencies": {
+    "angular": "^1.5.3",
+    "angular-resource": "^1.5.3",
+    "angular-ui-router": "^1.0.0-alpha.3",
     "bcrypt": "^0.8.5",
     "compression": "^1.0.3",
     "cors": "^2.5.2",
@@ -17,10 +22,18 @@
     "loopback-component-explorer": "^2.1.0",
     "loopback-connector-mongodb": "^1.13.3",
     "loopback-datasource-juggler": "^2.46.0",
-    "serve-favicon": "^2.0.1"
+    "serve-favicon": "^2.0.1",
+    "skeleton-css": "^2.0.4"
   },
   "devDependencies": {
-    "loopback-console": "^0.2.2"
+    "concurrently": "^2.0.0",
+    "gulp": "^3.9.1",
+    "gulp-loopback-sdk-angular": "^0.1.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-watch": "^4.3.5",
+    "gulp-webserver": "^0.9.1",
+    "loopback-console": "^0.2.2",
+    "nodemon": "^1.9.1"
   },
   "repository": {
     "type": "git",
