@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node .",
     "pretest": "jshint .",
-    "console": "loopback-console ."
+    "console": "loopback-console .",
+    "postinstall": "bower install"
   },
   "dependencies": {
     "bcrypt": "^0.8.5",
