@@ -8,7 +8,7 @@ import { LessonsComponent } from './lessons.component';
 
 @Component({
   selector: 'app',
-  templateUrl: 'templates/app.html',
+  templateUrl: './app/app.html',
   directives: [ROUTER_DIRECTIVES],
   providers: [ROUTER_PROVIDERS]
 })

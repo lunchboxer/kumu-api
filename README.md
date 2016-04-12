@@ -24,7 +24,6 @@ $ npm install
 ```
 Then, get the files ready to run:
 ```
-$ npm run build
 $ npm run lb-ng
 ```
 Now all is ready. To launch development servers reloading on any relevant changes run:

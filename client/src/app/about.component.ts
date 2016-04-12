@@ -4,7 +4,7 @@ import { Router } from 'angular2/router';
 
 @Component ({
   selector: 'about',
-  templateUrl: 'templates/about.component.html',
+  templateUrl: './app/about.component.html',
 })
 export class AboutComponent {
   constructor(private _router: Router) {}

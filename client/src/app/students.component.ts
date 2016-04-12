@@ -7,7 +7,7 @@ import { HTTP_PROVIDERS } from 'angular2/http';
 
 @Component ({
   selector: 'students',
-  templateUrl: '/templates/students.component.html',
+  templateUrl: './app/students.component.html',
   providers: [ StudentService, UserService, HTTP_PROVIDERS],
 
 })
