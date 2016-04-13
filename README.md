@@ -10,19 +10,13 @@ In it's current development state, it is a loopback installation with data struc
 
 This client is built with Angular 2. It emulates some of the techniques used in [Qeti project](https://github.com/Qeti/Qeti). And explained in this [StackOverflow question](http://stackoverflow.com/questions/34843235/is-it-possible-to-generate-services-for-angular2-from-loopback).
 
-[This issue](https://github.com/angular/angular/issues/4902) is the motivation for the hack inserted at the top of each .ts file currently:
-```
- ///<reference path="../../../node_modules/angular2/typings/browser.d.ts"/>
-```
-This keeps the transpiler from complaining too much about typings while we are developing. This will likely not be necessary in future versions of Angular2 beta.
-
 ## Install
 
 First, install dependencies by entering the following from a terminal inside this directory:
 ```
 $ npm install
 ```
-Then, get the files ready to run:
+Then, produce the server's service file:
 ```
 $ npm run lb-ng
 ```
