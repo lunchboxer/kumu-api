@@ -14,7 +14,7 @@ This branch is for setting up a foundation using angular 2 instead. It emulates 
 ```
  ///<reference path="../../../node_modules/angular2/typings/browser.d.ts"/>
 ```
-This keeps the transcompiler from complaining too much about typings while we are developing. This will likely not be neccesary in future versions of Angular2 beta.
+This keeps the transpiler from complaining too much about typings while we are developing. This will likely not be necessary in future versions of Angular2 beta.
 
 ## Install
 

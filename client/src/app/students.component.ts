@@ -1,9 +1,10 @@
  ///<reference path="../../../node_modules/angular2/typings/browser.d.ts"/>
-import { Component, Injectable, OnInit } from 'angular2/core';
-import { Router } from 'angular2/router';
-import { StudentApi as StudentService } from './lb-services';
-import { UserApi as UserService } from './lb-services';
-import { HTTP_PROVIDERS } from 'angular2/http';
+import { Component, Injectable, OnInit } from 'angular2/core'
+import { Router } from 'angular2/router'
+import { Student } from './student'
+import { StudentApi as StudentService } from './lb-services'
+import { UserApi as UserService } from './lb-services'
+import { HTTP_PROVIDERS } from 'angular2/http'
 
 @Component ({
   selector: 'students',
@@ -21,7 +22,7 @@ export class StudentsComponent implements OnInit {
               protected students: StudentService,
               protected user: UserService) {}
 
-  studentlist: any;
+  studentlist: Student[];
   count: number;
 
   public getStudents() {

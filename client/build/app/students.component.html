@@ -1,7 +1,25 @@
 <h2>Students</h2>
-<p>There are {{count}}</p>
-<ul>
-  <li *ngFor="#student of studentlist">
-    {{student.id}} - {{student.EnglishName}} ({{student.ChineseName}})
-  </li>
-</ul>
+<p>There are <strong>{{count}}</strong> students in records.</p>
+<label for="searchStudents">Search</label>
+<input type="text" name="searchStudents">
+<table class="u-full-width">
+  <thead>
+    <tr>
+      <th>English Name</th>
+      <th>Chinese Name</th>
+      <th>Sex</th>
+      <th>ID</th>
+      <th>Birthdate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="#student of studentlist">
+      <td>{{ student.EnglishName }}</td>
+      <td>{{ student.ChineseName }}</td>
+      <td>{{ student.gender }}</td>
+      <td>{{ student.id}}</td>
+      <!-- pipe the date through date pipe for proper formatting when works -->
+      <td>{{ student.birthdate }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -24,7 +24,7 @@
     "gender": {
       "type": "string",
       "required": false,
-      "description": "'m' for male, 'f' for female"
+      "description": "'M' for male, 'F' for female"
     },
     "birthdate": {
       "type": "date",

@@ -22,10 +22,10 @@ module.exports = function(app) {
       var Student = app.models.Student;
 
       Student.create([
-        { "EnglishName": "Sam", "ChineseName": "王朋",
-          "gender":"m", "birthdate":"2006-02-30", "id": 1234567890 },
-        { "EnglishName": "Tina", "ChineseName": "王菲",
-          "gender":"f", "birthdate":"2006-04-10", "id": 1234567891 }
+        { EnglishName: "Sam", ChineseName: "王朋",
+          gender:"M", birthdate:"2006-02-30", id: 1234567890 },
+        { EnglishName: "Tina", ChineseName: "王菲",
+          gender:"F", birthdate:"2006-04-10", id: 1234567891 }
       ], function(err, Students) {
         if (err) throw err;
 
@@ -35,14 +35,14 @@ module.exports = function(app) {
         var Term = app.models.Term;
         Term.create([
           {
-            "name": "Fall 2015-16",
-            "beginDate": "2015-08-24",
-            "endDate": "2016-01-14"
+            name: "Fall 2015-16",
+            beginDate: "2015-08-24",
+            endDate: "2016-01-14"
           },
           {
-            "name": "Spring 2015-16",
-            "beginDate": "2016-02-15",
-            "endDate": "2016-07-02"
+            name: "Spring 2015-16",
+            beginDate: "2016-02-15",
+            endDate: "2016-07-02"
           }
         ], function(err, Terms) {
           if (err) throw err;
@@ -51,14 +51,14 @@ module.exports = function(app) {
 
           // create Classes with new terms
           Terms[1].classes.create([
-            { "grade": "3", "name" : "301"},
-            { "grade": "3", "name" : "302"},
-            { "grade": "3", "name" : "303"},
-            { "grade": "3", "name" : "304"},
-            { "grade": "3", "name" : "305"},
-            { "grade": "6", "name" : "601"},
-            { "grade": "6", "name" : "602"},
-            { "grade": "6", "name" : "603"}
+            { grade: "3", name : "301"},
+            { grade: "3", name : "302"},
+            { grade: "3", name : "303"},
+            { grade: "3", name : "304"},
+            { grade: "3", name : "305"},
+            { grade: "6", name : "601"},
+            { grade: "6", name : "602"},
+            { grade: "6", name : "603"}
           ], function(err, Classes) {
             if (err) throw err;
 
@@ -67,8 +67,8 @@ module.exports = function(app) {
             // seat sample students in the sample classes
             var Seating = app.models.Seating;
             Seating.create([
-              {"seatNumber":12,"classId":Classes[2].id, "studentId":Students[0].id},
-              {"seatNumber":1,"classId":Classes[0].id, "studentId":Students[1].id}
+              {seatNumber:12, classId:Classes[2].id, studentId:Students[0].id},
+              {seatNumber:1, classId:Classes[0].id, studentId:Students[1].id}
             ], function(err, Seatings) {
               if (err) throw err;
 
