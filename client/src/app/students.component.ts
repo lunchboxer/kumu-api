@@ -1,4 +1,3 @@
- ///<reference path="../../../node_modules/angular2/typings/browser.d.ts"/>
 import { Component, Injectable, OnInit } from 'angular2/core'
 import { Router } from 'angular2/router'
 import { Student } from './student'

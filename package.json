@@ -31,7 +31,7 @@
     "rxjs": "5.0.0-beta.2",
     "serve-favicon": "^2.0.1",
     "skeleton-css": "^2.0.4",
-    "systemjs": "0.19.25",
+    "systemjs": "^0.19.26",
     "zone.js": "^0.6.10"
   },
   "devDependencies": {
@@ -42,7 +42,7 @@
     "loopback-console": "^0.2.2",
     "loopback-sdk-angular": "github:qeti/loopback-sdk-angular#188-angular2-support",
     "loopback-sdk-angular-cli": "github:qeti/loopback-sdk-angular-cli#37-angular2-support",
-    "typescript": "^1.8.9",
+    "typescript": "^1.8.10",
     "typings": "^0.7.12"
   },
   "repository": {
