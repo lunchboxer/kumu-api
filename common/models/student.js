@@ -40,5 +40,10 @@ module.exports = function(Student) {
   });
 
   Student.validatesInclusionOf('gender', {in: ['M','F']});
+  Student.validate('ChineseName', isChinese, {message: 'Chinese characters only'})
+  function isChinese(err) {
+    onlyChineseCharacters = /[\u3400-\u9FBF]/.test(this.ChineseName)
+    if(!onlyChineseCharacters) err();
+  }
 
 };
