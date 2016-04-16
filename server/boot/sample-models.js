@@ -17,8 +17,6 @@ module.exports = function(app) {
     ], function(err, Teachers) {
       if (err) throw err;
 
-      console.log('Created sample Teacher');
-
       var Student = app.models.Student;
 
       Student.create([
@@ -28,8 +26,6 @@ module.exports = function(app) {
           gender:"F", birthdate:"2006-04-10", id: 1234567891 }
       ], function(err, Students) {
         if (err) throw err;
-
-        console.log('Created sample Students');
 
         // create sample terms
         var Term = app.models.Term;
@@ -47,8 +43,6 @@ module.exports = function(app) {
         ], function(err, Terms) {
           if (err) throw err;
 
-          console.log('Created sample Terms.');
-
           // create Classes with new terms
           Terms[1].classes.create([
             { grade: "3", name : "301"},
@@ -62,8 +56,6 @@ module.exports = function(app) {
           ], function(err, Classes) {
             if (err) throw err;
 
-            console.log('Created sample classes.');
-
             // seat sample students in the sample classes
             var Seating = app.models.Seating;
             Seating.create([
@@ -71,8 +63,6 @@ module.exports = function(app) {
               {seatNumber:1, classId:Classes[0].id, studentId:Students[1].id}
             ], function(err, Seatings) {
               if (err) throw err;
-
-              console.log('Added sample students to classes.')
 
               //Now for the studentGroups
               // First, create them
@@ -82,12 +72,10 @@ module.exports = function(app) {
                 { "name": "303 Conversation Even", "termId": Terms[1].id }
               ], function(err, StudentGroups){
                 if (err) throw err;
-                console.log('Created sample StudentGroups');
 
                 // Next, add students to them
                 StudentGroups[0].students.add(Students[1])
                 StudentGroups[1].students.add(Students[0])
-                console.log('Added sample students to groups');
 
                 // Time to make a sample lesson or two
                 var Lesson = app.models.Lesson;
@@ -110,8 +98,6 @@ module.exports = function(app) {
                   }
                 ], function(err, Lessons) {
                   if (err) throw err;
-
-                  console.log('Created sample Lessons');
 
                   // Associate studentgroups with lessons
                   Lessons[0].targetStudentGroups.add(StudentGroups[1])
@@ -136,7 +122,6 @@ module.exports = function(app) {
                     }
                   ], function(err, LessonNotes) {
                     if (err) throw err;
-                    console.log('Created sample LessonNotes');
 
                     // Make LearningSessions
                     var LearningSession = app.models.LearningSession;
@@ -159,8 +144,6 @@ module.exports = function(app) {
                       LearningSessions[0].teachers.add(Teachers[0])
                       LearningSessions[1].teachers.add(Teachers[1])
 
-                      console.log('Created sample LearningSessions with related lessons');
-
                       var WeeklySchedule = app.models.WeeklySchedule;
                       WeeklySchedule.create([
                         { "name": "Spring 2016 default",
@@ -169,8 +152,6 @@ module.exports = function(app) {
                         }
                       ], function(err, WeeklySchedules) {
                         if (err) throw err;
-
-                        console.log('Created sample WeeklySchedule')
 
                         var ScheduleItem = app.models.ScheduleItem;
                         var starttime = new Date(0,0,0,13,40)
@@ -185,8 +166,8 @@ module.exports = function(app) {
                         ], function(err, SchedulesItems) {
                         if (err) throw err;
 
-                        console.log('Created sample ScheduleItem')
-                        console.log('\n -- Sample-models completed -- \n');
+                        console.log('Created sample models')
+                        console.log('\n -- Ready to roll! -- \n');
 
                         });// ScheduleItem.create()
 

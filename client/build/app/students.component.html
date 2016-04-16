@@ -16,7 +16,7 @@
   <tbody>
     <tr *ngFor="#student of studentlist">
       <td>{{ student.EnglishName }}</td>
-      <td>{{ student.ChineseName }}</td>
+      <td>{{ student.ChineseName }} ({{ student.PinyinName }})</td>
       <td>{{ student.gender }}</td>
       <td>{{ student.id}}</td>
       <!-- DatePipe doesn't like this date for some reason -->

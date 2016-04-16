@@ -15,6 +15,10 @@
       "type": "string",
       "required": true
     },
+    "PinyinName": {
+      "type": "string",
+      "required": false
+    },
     "id": {
       "type": "number",
       "id": true,
