@@ -1,5 +1,6 @@
 <h2>Students</h2>
 <p>There are <strong>{{count}}</strong> students in records.</p>
+
 <label for="searchStudents">Search</label>
 <input type="text" name="searchStudents">
 <table class="u-full-width">
@@ -18,8 +19,8 @@
       <td>{{ student.ChineseName }}</td>
       <td>{{ student.gender }}</td>
       <td>{{ student.id}}</td>
-      <!-- pipe the date through date pipe for proper formatting when works -->
-      <td>{{ student.birthdate }}</td>
+      <!-- DatePipe doesn't like this date for some reason -->
+      <td>{{ student.bdate | date }}</td>
     </tr>
   </tbody>
 </table>

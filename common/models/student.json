@@ -27,7 +27,7 @@
       "description": "'M' for male, 'F' for female"
     },
     "birthdate": {
-      "type": "date",
+      "type": "Date",
       "required": false
     }
   },

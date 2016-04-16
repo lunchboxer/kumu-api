@@ -34,6 +34,11 @@ export class StudentsComponent implements OnInit {
         })
         .subscribe((response: any) => {
           this.studentlist = response;
+          this.studentlist.map(function(student){
+            // since we get a string instead of Date object in the get call
+            // we will convert it to a proper date object. put that in bdate.
+            student.bdate = new Date(student.birthdate)
+          })
         });
     });
   }

@@ -3,5 +3,6 @@ export class Student {
   ChineseName: string
   EnglishName: string
   gender: string
-  birthdate: Date
+  birthdate: string
+  bdate: Date
 }
