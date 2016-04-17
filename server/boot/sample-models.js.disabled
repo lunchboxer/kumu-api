@@ -59,8 +59,8 @@ module.exports = function(app) {
             // seat sample students in the sample classes
             var Seating = app.models.Seating;
             Seating.create([
-              {seatNumber:12, classId:Classes[2].id, studentId:Students[0].id},
-              {seatNumber:1, classId:Classes[0].id, studentId:Students[1].id}
+              {seatNumber:1, classId:Classes[0].id, studentId:Students[0].id},
+              {seatNumber:2, classId:Classes[0].id, studentId:Students[1].id}
             ], function(err, Seatings) {
               if (err) throw err;
 
