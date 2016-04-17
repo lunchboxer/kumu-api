@@ -13,8 +13,6 @@ module.exports = function(Term) {
 
   Term.validate('endDate', afterBegin, {message: 'End date must be after begin date.'})
   function afterBegin(err) {
-    console.log("endDate : " + this.endDate)
-    console.log("beginDate : " + this.beginDate)
     if(this.endDate <= this.beginDate) err();
   }
 
