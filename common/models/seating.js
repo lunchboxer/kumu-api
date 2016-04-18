@@ -75,7 +75,9 @@ module.exports = function(Seating) {
               result.forEach(function(seating) {
                 var newTermId = seating.class.termId.toString()
                 var existingTermId = classresult.termId.toString()
-                if (existingTermId === newTermId) // err();
+                if (existingTermId === newTermId) {
+                  // err();
+                }
               })
             }
           }
