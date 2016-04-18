@@ -15,9 +15,9 @@ module.exports = function(Student) {
   // Make sure the time parts of the birthdate are zero
   Student.observe('before save', function bornAtMidnight(ctx, next) {
     if (ctx.instance) {
-      ctx.instance.birthdate.setHours(0,0,0,0);
+      ctx.instance.birthdate.setHours(0, 0, 0, 0);
     } else {
-      ctx.data.birhtdate.setHours(0,0,0,0);
+      ctx.data.birhtdate.setHours(0, 0, 0, 0);
     }
     next();
   });
@@ -39,11 +39,15 @@ module.exports = function(Student) {
     next();
   });
 
-  Student.validatesInclusionOf('gender', {in: ['M','F']});
-  Student.validate('ChineseName', isChinese, {message: 'Chinese characters only'})
+  Student.validatesInclusionOf('gender', { in : ['M', 'F']
+  });
+  Student.validate('ChineseName', isChinese, {
+    message: 'Chinese characters only'
+  })
+
   function isChinese(err) {
     onlyChineseCharacters = /[\u3400-\u9FBF]/.test(this.ChineseName)
-    if(!onlyChineseCharacters) err();
+    if (!onlyChineseCharacters) err();
   }
 
 };
