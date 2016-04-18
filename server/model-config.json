@@ -75,5 +75,13 @@
   "ScheduleItem": {
     "dataSource": "localMongo",
     "public": true
+  },
+  "Deployment": {
+    "dataSource": "localMongo",
+    "public": true
+  },
+  "StudentNote": {
+    "dataSource": "localMongo",
+    "public": true
   }
 }

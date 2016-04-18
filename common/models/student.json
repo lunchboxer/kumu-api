@@ -47,6 +47,11 @@
       "model": "Class",
       "foreignKey": "",
       "through": "Seating"
+    },
+    "studentNotes": {
+      "type": "hasMany",
+      "model": "StudentNote",
+      "foreignKey": ""
     }
   },
   "acls": [],

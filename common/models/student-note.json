@@ -1,25 +1,27 @@
 {
-  "name": "LessonNote",
+  "name": "StudentNote",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "text": {
+    "note": {
       "type": "string",
       "required": true
     },
-    "date": {
-      "type": "date",
-      "required": true
+    "created": {
+      "type": "date"
+    },
+    "updated": {
+      "type": "date"
     }
   },
   "validations": [],
   "relations": {
-    "lesson": {
+    "student": {
       "type": "belongsTo",
-      "model": "Lesson",
+      "model": "Student",
       "foreignKey": ""
     },
     "author": {
