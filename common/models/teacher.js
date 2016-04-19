@@ -1,3 +1,2 @@
-module.exports = function(Teacher) {
-
-};
+module.exports = function (Teacher) {
+}

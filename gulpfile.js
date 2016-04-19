@@ -1,8 +1,7 @@
-var gulp       = require('gulp'),
-    webserver = require('gulp-webserver'),
-    watch      = require('gulp-watch');
+var gulp = require('gulp')
+var webserver = require('gulp-webserver')
 
-gulp.task('copylibs', function() {
+gulp.task('copylibs', function () {
   return gulp
     .src([
       'node_modules/es6-shim/es6-shim.min.js',
@@ -16,15 +15,15 @@ gulp.task('copylibs', function() {
       'node_modules/skeleton-css/css/normalize.css',
       'node_modules/skeleton-css/css/skeleton.css'
     ])
-    .pipe(gulp.dest('client/build/lib/'));
-});
+    .pipe(gulp.dest('client/build/lib/'))
+})
 
-gulp.task('webserver', function() {
+gulp.task('webserver', function () {
   gulp.src('client/build')
     .pipe(webserver({
       livereload: true,
       open: true
-    }));
-});
+    }))
+})
 
-gulp.task('default', ['webserver']);
+gulp.task('default', ['webserver'])

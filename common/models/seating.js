@@ -1,11 +1,10 @@
-module.exports = function(Seating) {
-
+module.exports = function (Seating) {
   // check that a given seatnumber is unique for a class
   Seating.validateAsync('seatNumber', seatUnique, {
     message: 'A student with that seat number already exists for that class'
   })
 
-  function seatUnique(err, done) {
+  function seatUnique (err, done) {
     Seating.findOne({
       where: {
         and: [{
@@ -18,8 +17,10 @@ module.exports = function(Seating) {
           }
         }]
       }
-    }, function(nerr, result) {
-      if (result) err();
+    }, function (nerr, result) {
+      if (result) {
+        err()
+      }
       done()
     })
   }
@@ -29,7 +30,7 @@ module.exports = function(Seating) {
     message: 'This student is already assigned to the class'
   })
 
-  function studentUnique(err, done) {
+  function studentUnique (err, done) {
     Seating.findOne({
       where: {
         and: [{
@@ -42,8 +43,10 @@ module.exports = function(Seating) {
           }
         }]
       }
-    }, function(nerr, result) {
-      if (result) err();
+    }, function (nerr, result) {
+      if (result) {
+        err()
+      }
       done()
     })
   }
@@ -53,26 +56,26 @@ module.exports = function(Seating) {
     message: 'A student cannot be in two different classes in one term'
   })
 
-  function oneClassPerTerm(err, done) {
+  function oneClassPerTerm (err, done) {
     // find classes that this student already belongs to
     Seating.find({
       where: {
         studentId: this.studentId
       },
       include: [{
-        'class': 'class'
+        class: 'class'
       }]
-    }, function(nerr, result) {
+    }, function (nerr, result) {
       if (result) {
         Seating.app.models.Class.findOne({
-            where: {
-              classId: this.classId
-            }
-          },
-          function(perr, classresult) {
+          where: {
+            classId: this.classId
+          }
+        },
+          function (perr, classresult) {
             if (classresult) {
               // compare termIds
-              result.forEach(function(seating) {
+              result.forEach(function (seating) {
                 var newTermId = seating.class.termId.toString()
                 var existingTermId = classresult.termId.toString()
                 if (existingTermId === newTermId) {
@@ -92,14 +95,16 @@ module.exports = function(Seating) {
     message: 'Student id not found in records'
   })
 
-  function studentExists(err, done) {
-    var stuff = Seating.findOne({
+  function studentExists (err, done) {
+    Seating.findOne({
       where: {
         studentId: this.studentId
       }
-    }).then(result => {
-      if (!result) err();
-      done();
+    }).then((result) => {
+      if (!result) {
+        err()
+      }
+      done()
     })
   }
   // check that class exists
@@ -107,14 +112,16 @@ module.exports = function(Seating) {
     message: 'Class not found in records'
   })
 
-  function classExists(err, done) {
-    var stuff = Seating.findOne({
+  function classExists (err, done) {
+    Seating.findOne({
       where: {
         classId: this.classId
       }
-    }).then(result => {
-      if (!result) err();
-      done();
+    }).then((result) => {
+      if (!result) {
+        err()
+      }
+      done()
     })
   }
-};
+}

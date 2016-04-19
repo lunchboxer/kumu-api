@@ -1,3 +1,2 @@
-module.exports = function(StudentGroup) {
-
-};
+module.exports = function (StudentGroup) {
+}

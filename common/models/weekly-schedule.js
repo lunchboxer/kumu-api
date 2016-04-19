@@ -1,3 +1,2 @@
-module.exports = function(WeeklySchedule) {
-
-};
+module.exports = function (WeeklySchedule) {
+}

@@ -1,2 +1,2 @@
-module.exports = function(Class) {
-};
+module.exports = function (Class) {
+}
