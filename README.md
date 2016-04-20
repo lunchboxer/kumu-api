@@ -16,7 +16,7 @@ First, install dependencies by entering the following from a terminal inside thi
 ```
 $ npm install
 ```
-Then, produce the server's service file:
+Skip the set-up for semantic-ui. The configuration is already written into semantic.json. Then, produce the server's service file:
 ```
 $ npm run lb-ng
 ```

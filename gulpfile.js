@@ -12,8 +12,8 @@ gulp.task('copylibs', function () {
       'node_modules/angular2/bundles/angular2.dev.js',
       'node_modules/angular2/bundles/router.dev.js',
       'node_modules/angular2/bundles/http.dev.js',
-      'node_modules/skeleton-css/css/normalize.css',
-      'node_modules/skeleton-css/css/skeleton.css'
+      'node_modules/ng-semantic/bundles/ng-semantic.js',
+      'node_modules/jquery/dist/jquery.min.js'
     ])
     .pipe(gulp.dest('client/build/lib/'))
 })
@@ -22,7 +22,7 @@ gulp.task('webserver', function () {
   gulp.src('client/build')
     .pipe(webserver({
       livereload: true,
-      open: true
+      open: false
     }))
 })
 

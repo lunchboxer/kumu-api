@@ -1,44 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <base href="/">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Kumu teaching tools</title>
 
-    <link rel="icon" type="image/png" href="favicon-32x32.png" size="32x32">
-    <link rel="icon" type="image/png" href="favicon-16x16.png" size="16x16">
+<head>
+  <base href="/">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Kumu teaching tools</title>
 
-    <link rel="stylesheet" href="lib/normalize.css" type="text/css" media="screen" charset="utf-8">
-    <link rel="stylesheet" href="lib/skeleton.css" type="text/css" media="screen" charset="utf-8">
-    <link rel="stylesheet" href="styles.css" type="text/css" media="screen" charset="utf-8">
+  <link rel="icon" type="image/png" href="favicon.png">
 
-    <script src="lib/es6-shim.min.js"></script>
-    <script src="lib/system-polyfills.js"></script>
-    <script src="lib/angular2-polyfills.js"></script>
-    <script src="lib/system.src.js"></script>
-    <script src="lib/Rx.js"></script>
-    <script src="lib/angular2.dev.js"></script>
-    <script src="lib/router.dev.js"></script>
-    <script src="lib/http.dev.js"></script>
+  <link rel="stylesheet" type="text/css" href="lib/semantic.min.css">
+  <link rel="stylesheet" href="styles.css" type="text/css" media="screen" charset="utf-8">
 
-    <!-- 2. Configure SystemJS -->
-    <script>
-      System.config({
-        packages: {
-          app: {
-            format: 'register',
-            defaultExtension: 'js'
-          }
+  <script src="lib/es6-shim.min.js"></script>
+  <script src="lib/system-polyfills.js"></script>
+  <script src="lib/angular2-polyfills.js"></script>
+  <script src="lib/system.src.js"></script>
+  <script src="lib/Rx.js"></script>
+  <script src="lib/angular2.dev.js"></script>
+  <script src="lib/router.dev.js"></script>
+  <script src="lib/http.dev.js"></script>
+
+  <script src="lib/jquery.min.js"></script>
+  <script src="lib/semantic.min.js"></script>
+
+  <script>
+    System.config({
+      packages: {
+        app: {
+          format: 'register',
+          defaultExtension: 'js'
         }
-      });
-      System.import('app/main')
-            .then(null, console.error.bind(console));
-    </script>
-  </head>
-  <body>
-    <div class="container">
-      <app><span id="loading">Loading...</span></app>
-    </div>
-  </body>
+      }
+    });
+    System.import('app/main')
+      .then(null, console.error.bind(console));
+  </script>
+</head>
+
+<body>
+
+    <app><span class="loading">Loading...</span></app>
+
+
+</body>
+
 </html>

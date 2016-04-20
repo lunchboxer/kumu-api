@@ -1,44 +1,19 @@
 body {
-  padding-top: 1em;
+  padding-top: 3em;
   background-color: #eee;
   color: #777;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  margin-top: 0.3em;
+.loading {
+  padding: 1em 1em;
+  color: #aaa;
+  font-size: 2em;
 }
 
-nav {
-  border-bottom: 1px solid #ddd;
-}
-nav a:link,
-nav a:visited,
-nav a:active,
-nav a:hover {
-  font-size: 1.2em;
-  color: #bbb;
-  margin: 0;
-  padding: 0.1em 0.4em;
+a:focus {
   text-decoration: none;
   outline: none;
 }
-
-a.router-link-active:link,
-a.router-link-active:visited,
-a.router-link-active:active,
-a.router-link-active:hover {
-  color: #999;
-  border-bottom: 1px solid #999;
-  cursor: default;
-  pointer-events: none;
-  font-weight: bold;
-  outline: none;
-}
-
-#loading {
-  color: #aaa;
-  font-size: 2em;
+.main-content {
+  margin-top: 2em;
 }

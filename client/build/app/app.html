@@ -1,10 +1,21 @@
-<h1 class="logo">Kumu</h1>
+<div class="ui vertical interted sidebar menu left">
+<a class="active item">About</a>
 
-<nav>
-  <a [routerLink]="['About']">About</a>
-  <a [routerLink]="['Students']">Students</a>
-  <a [routerLink]="['Classes']">Classes</a>
-  <a [routerLink]="['Lessons']">Lessons</a>
-</nav>
 
-<router-outlet></router-outlet>
+</div>
+
+<div class="ui inverted main fixed menu">
+  <a class="item active" [routerLink]="['About']">About</a>
+  <a class="item" [routerLink]="['Students']">Students</a>
+  <a class="item" [routerLink]="['Classes']">Classes</a>
+  <a class="item" [routerLink]="['Lessons']">Lessons</a>
+
+  <a class="right item">Log in</a>
+
+</div>
+
+<div class="pusher main-content">
+  <div class="ui container">
+  <router-outlet></router-outlet>
+</div>
+</div>

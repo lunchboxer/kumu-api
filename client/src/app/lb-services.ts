@@ -1372,6 +1372,100 @@ export class StudentApi extends BaseLoopBackApi {
   }
 
   /**
+   * Find a related item by id for studentNotes.
+   *
+   * @param any id PersistedModel id
+   *
+   * @param any fk Foreign key for studentNotes
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `Student` object.)
+   * </em>
+   */
+  public __findById__studentNotes(id: any, fk: any) {
+    let method: string = "GET";
+
+    let url: string = this.getPath() + "/Students/:id/studentNotes/:fk";
+    let urlParams: any = {
+      id: id,
+      fk: fk
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params);
+    return result;
+  }
+
+  /**
+   * Delete a related item by id for studentNotes.
+   *
+   * @param any id PersistedModel id
+   *
+   * @param any fk Foreign key for studentNotes
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * This method returns no data.
+   */
+  public __destroyById__studentNotes(id: any, fk: any) {
+    let method: string = "DELETE";
+
+    let url: string = this.getPath() + "/Students/:id/studentNotes/:fk";
+    let urlParams: any = {
+      id: id,
+      fk: fk
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params);
+    return result;
+  }
+
+  /**
+   * Update a related item by id for studentNotes.
+   *
+   * @param any id PersistedModel id
+   *
+   * @param any fk Foreign key for studentNotes
+   *
+   * @param object data Request data.
+   *
+   * This method expects a subset of model properties as request parameters.
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `Student` object.)
+   * </em>
+   */
+  public __updateById__studentNotes(id: any, fk: any, data: any = undefined) {
+    let method: string = "PUT";
+
+    let url: string = this.getPath() + "/Students/:id/studentNotes/:fk";
+    let urlParams: any = {
+      id: id,
+      fk: fk
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params, data);
+    return result;
+  }
+
+  /**
    * Queries studentGroups of Student.
    *
    * @param any id PersistedModel id
@@ -1599,6 +1693,125 @@ export class StudentApi extends BaseLoopBackApi {
     let method: string = "GET";
 
     let url: string = this.getPath() + "/Students/:id/classes/count";
+    let urlParams: any = {
+      id: id
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params);
+    return result;
+  }
+
+  /**
+   * Queries studentNotes of Student.
+   *
+   * @param any id PersistedModel id
+   *
+   * @param object filter 
+   *
+   * @returns object[] An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `Student` object.)
+   * </em>
+   */
+  public __get__studentNotes(id: any, filter: LoopBackFilterInterface = undefined) {
+    let method: string = "GET";
+
+    let url: string = this.getPath() + "/Students/:id/studentNotes";
+    let urlParams: any = {
+      id: id
+    };
+
+    let params: any = {};
+    if (filter !== undefined) {
+      params.filter = filter;
+    }
+
+    let result = this.request(method, url, urlParams, params);
+    return result;
+  }
+
+  /**
+   * Creates a new instance in studentNotes of this model.
+   *
+   * @param any id PersistedModel id
+   *
+   * @param object data Request data.
+   *
+   * This method expects a subset of model properties as request parameters.
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `Student` object.)
+   * </em>
+   */
+  public __create__studentNotes(id: any, data: any = undefined) {
+    let method: string = "POST";
+
+    let url: string = this.getPath() + "/Students/:id/studentNotes";
+    let urlParams: any = {
+      id: id
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params, data);
+    return result;
+  }
+
+  /**
+   * Deletes all studentNotes of this model.
+   *
+   * @param any id PersistedModel id
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * This method returns no data.
+   */
+  public __delete__studentNotes(id: any) {
+    let method: string = "DELETE";
+
+    let url: string = this.getPath() + "/Students/:id/studentNotes";
+    let urlParams: any = {
+      id: id
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params);
+    return result;
+  }
+
+  /**
+   * Counts studentNotes of Student.
+   *
+   * @param any id PersistedModel id
+   *
+   * @param object where Criteria to match model instances
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * Data properties:
+   *
+   *  - `count` – `{number}` - 
+   */
+  public __count__studentNotes(id: any, where: any = undefined) {
+    let method: string = "GET";
+
+    let url: string = this.getPath() + "/Students/:id/studentNotes/count";
     let urlParams: any = {
       id: id
     };
@@ -2675,6 +2888,39 @@ export class StudentApi extends BaseLoopBackApi {
     return result;
   }
 
+  /**
+   * Fetches belongsTo relation student.
+   *
+   * @param any id PersistedModel id
+   *
+   * @param boolean refresh 
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `Student` object.)
+   * </em>
+   */
+  public __get__StudentNote__student(id: any, refresh: boolean = undefined) {
+    let method: string = "GET";
+
+    let url: string = this.getPath() + "/StudentNotes/:id/student";
+    let urlParams: any = {
+      id: id
+    };
+
+    let params: any = {};
+    if (refresh !== undefined) {
+      params.refresh = refresh;
+    }
+
+    let result = this.request(method, url, urlParams, params);
+    return result;
+  }
+
 
   /**
    * The name of the model represented by this $resource,
@@ -3251,6 +3497,100 @@ export class TeacherApi extends BaseLoopBackApi {
     let method: string = "PUT";
 
     let url: string = this.getPath() + "/Teachers/:id/weeklySchedules/:fk";
+    let urlParams: any = {
+      id: id,
+      fk: fk
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params, data);
+    return result;
+  }
+
+  /**
+   * Find a related item by id for studentNotes.
+   *
+   * @param any id User id
+   *
+   * @param any fk Foreign key for studentNotes
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `Teacher` object.)
+   * </em>
+   */
+  public __findById__studentNotes(id: any, fk: any) {
+    let method: string = "GET";
+
+    let url: string = this.getPath() + "/Teachers/:id/studentNotes/:fk";
+    let urlParams: any = {
+      id: id,
+      fk: fk
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params);
+    return result;
+  }
+
+  /**
+   * Delete a related item by id for studentNotes.
+   *
+   * @param any id User id
+   *
+   * @param any fk Foreign key for studentNotes
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * This method returns no data.
+   */
+  public __destroyById__studentNotes(id: any, fk: any) {
+    let method: string = "DELETE";
+
+    let url: string = this.getPath() + "/Teachers/:id/studentNotes/:fk";
+    let urlParams: any = {
+      id: id,
+      fk: fk
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params);
+    return result;
+  }
+
+  /**
+   * Update a related item by id for studentNotes.
+   *
+   * @param any id User id
+   *
+   * @param any fk Foreign key for studentNotes
+   *
+   * @param object data Request data.
+   *
+   * This method expects a subset of model properties as request parameters.
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `Teacher` object.)
+   * </em>
+   */
+  public __updateById__studentNotes(id: any, fk: any, data: any = undefined) {
+    let method: string = "PUT";
+
+    let url: string = this.getPath() + "/Teachers/:id/studentNotes/:fk";
     let urlParams: any = {
       id: id,
       fk: fk
@@ -3847,6 +4187,125 @@ export class TeacherApi extends BaseLoopBackApi {
     let method: string = "GET";
 
     let url: string = this.getPath() + "/Teachers/:id/weeklySchedules/count";
+    let urlParams: any = {
+      id: id
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params);
+    return result;
+  }
+
+  /**
+   * Queries studentNotes of Teacher.
+   *
+   * @param any id User id
+   *
+   * @param object filter 
+   *
+   * @returns object[] An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `Teacher` object.)
+   * </em>
+   */
+  public __get__studentNotes(id: any, filter: LoopBackFilterInterface = undefined) {
+    let method: string = "GET";
+
+    let url: string = this.getPath() + "/Teachers/:id/studentNotes";
+    let urlParams: any = {
+      id: id
+    };
+
+    let params: any = {};
+    if (filter !== undefined) {
+      params.filter = filter;
+    }
+
+    let result = this.request(method, url, urlParams, params);
+    return result;
+  }
+
+  /**
+   * Creates a new instance in studentNotes of this model.
+   *
+   * @param any id User id
+   *
+   * @param object data Request data.
+   *
+   * This method expects a subset of model properties as request parameters.
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `Teacher` object.)
+   * </em>
+   */
+  public __create__studentNotes(id: any, data: any = undefined) {
+    let method: string = "POST";
+
+    let url: string = this.getPath() + "/Teachers/:id/studentNotes";
+    let urlParams: any = {
+      id: id
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params, data);
+    return result;
+  }
+
+  /**
+   * Deletes all studentNotes of this model.
+   *
+   * @param any id User id
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * This method returns no data.
+   */
+  public __delete__studentNotes(id: any) {
+    let method: string = "DELETE";
+
+    let url: string = this.getPath() + "/Teachers/:id/studentNotes";
+    let urlParams: any = {
+      id: id
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params);
+    return result;
+  }
+
+  /**
+   * Counts studentNotes of Teacher.
+   *
+   * @param any id User id
+   *
+   * @param object where Criteria to match model instances
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * Data properties:
+   *
+   *  - `count` – `{number}` - 
+   */
+  public __count__studentNotes(id: any, where: any = undefined) {
+    let method: string = "GET";
+
+    let url: string = this.getPath() + "/Teachers/:id/studentNotes/count";
     let urlParams: any = {
       id: id
     };
@@ -4775,6 +5234,39 @@ export class TeacherApi extends BaseLoopBackApi {
     let method: string = "GET";
 
     let url: string = this.getPath() + "/WeeklySchedules/:id/teacher";
+    let urlParams: any = {
+      id: id
+    };
+
+    let params: any = {};
+    if (refresh !== undefined) {
+      params.refresh = refresh;
+    }
+
+    let result = this.request(method, url, urlParams, params);
+    return result;
+  }
+
+  /**
+   * Fetches belongsTo relation author.
+   *
+   * @param any id PersistedModel id
+   *
+   * @param boolean refresh 
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `Teacher` object.)
+   * </em>
+   */
+  public __get__StudentNote__author(id: any, refresh: boolean = undefined) {
+    let method: string = "GET";
+
+    let url: string = this.getPath() + "/StudentNotes/:id/author";
     let urlParams: any = {
       id: id
     };
@@ -16929,6 +17421,1318 @@ export class ScheduleItemApi extends BaseLoopBackApi {
    */
   public getModelName() {
     return "ScheduleItem";
+  }
+}
+
+/**
+ * Api for the `Deployment` model.
+ */
+@Injectable()
+export class DeploymentApi extends BaseLoopBackApi {
+
+  constructor(
+    @Inject(Http) http: Http,
+    @Optional() @Inject(ErrorHandler) errorHandler: ErrorHandler
+  ) {
+    super(http, errorHandler);
+  }
+
+  /**
+   * Create a new instance of the model and persist it into the data source.
+   *
+   * @param object data Request data.
+   *
+   * This method expects a subset of model properties as request parameters.
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `Deployment` object.)
+   * </em>
+   */
+  public create(data: any = undefined) {
+    let method: string = "POST";
+
+    let url: string = this.getPath() + "/Deployments";
+    let urlParams: any = {
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params, data);
+    return result;
+  }
+
+  /**
+   * Create a new instance of the model and persist it into the data source.
+   *
+   * @param object data Request data.
+   *
+   * This method expects a subset of model properties as request parameters.
+   *
+   * @returns object[] An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `Deployment` object.)
+   * </em>
+   */
+  public createMany(data: any = undefined) {
+    let method: string = "POST";
+
+    let url: string = this.getPath() + "/Deployments";
+    let urlParams: any = {
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params, data);
+    return result;
+  }
+
+  /**
+   * Update an existing model instance or insert a new one into the data source.
+   *
+   * @param object data Request data.
+   *
+   * This method expects a subset of model properties as request parameters.
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `Deployment` object.)
+   * </em>
+   */
+  public upsert(data: any = undefined) {
+    let method: string = "PUT";
+
+    let url: string = this.getPath() + "/Deployments";
+    let urlParams: any = {
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params, data);
+    return result;
+  }
+
+  /**
+   * Check whether a model instance exists in the data source.
+   *
+   * @param any id Model id
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * Data properties:
+   *
+   *  - `exists` – `{boolean}` - 
+   */
+  public exists(id: any) {
+    let method: string = "GET";
+
+    let url: string = this.getPath() + "/Deployments/:id/exists";
+    let urlParams: any = {
+      id: id
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params);
+    return result;
+  }
+
+  /**
+   * Find a model instance by id from the data source.
+   *
+   * @param any id Model id
+   *
+   * @param object filter Filter defining fields and include
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `Deployment` object.)
+   * </em>
+   */
+  public findById(id: any, filter: LoopBackFilterInterface = undefined) {
+    let method: string = "GET";
+
+    let url: string = this.getPath() + "/Deployments/:id";
+    let urlParams: any = {
+      id: id
+    };
+
+    let params: any = {};
+    if (filter !== undefined) {
+      params.filter = filter;
+    }
+
+    let result = this.request(method, url, urlParams, params);
+    return result;
+  }
+
+  /**
+   * Find all instances of the model matched by filter from the data source.
+   *
+   * @param object filter Filter defining fields, where, include, order, offset, and limit
+   *
+   * @returns object[] An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `Deployment` object.)
+   * </em>
+   */
+  public find(filter: LoopBackFilterInterface = undefined) {
+    let method: string = "GET";
+
+    let url: string = this.getPath() + "/Deployments";
+    let urlParams: any = {
+    };
+
+    let params: any = {};
+    if (filter !== undefined) {
+      params.filter = filter;
+    }
+
+    let result = this.request(method, url, urlParams, params);
+    return result;
+  }
+
+  /**
+   * Find first instance of the model matched by filter from the data source.
+   *
+   * @param object filter Filter defining fields, where, include, order, offset, and limit
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `Deployment` object.)
+   * </em>
+   */
+  public findOne(filter: LoopBackFilterInterface = undefined) {
+    let method: string = "GET";
+
+    let url: string = this.getPath() + "/Deployments/findOne";
+    let urlParams: any = {
+    };
+
+    let params: any = {};
+    if (filter !== undefined) {
+      params.filter = filter;
+    }
+
+    let result = this.request(method, url, urlParams, params);
+    return result;
+  }
+
+  /**
+   * Update instances of the model matched by where from the data source.
+   *
+   * @param object where Criteria to match model instances
+   *
+   * @param object data Request data.
+   *
+   * This method expects a subset of model properties as request parameters.
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * The number of instances updated
+   */
+  public updateAll(where: any = undefined, data: any = undefined) {
+    let method: string = "POST";
+
+    let url: string = this.getPath() + "/Deployments/update";
+    let urlParams: any = {
+    };
+
+    let params: any = {};
+    if (where !== undefined) {
+      params.where = where;
+    }
+
+    let result = this.request(method, url, urlParams, params, data);
+    return result;
+  }
+
+  /**
+   * Delete a model instance by id from the data source.
+   *
+   * @param any id Model id
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `Deployment` object.)
+   * </em>
+   */
+  public deleteById(id: any) {
+    let method: string = "DELETE";
+
+    let url: string = this.getPath() + "/Deployments/:id";
+    let urlParams: any = {
+      id: id
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params);
+    return result;
+  }
+
+  /**
+   * Count instances of the model matched by where from the data source.
+   *
+   * @param object where Criteria to match model instances
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * Data properties:
+   *
+   *  - `count` – `{number}` - 
+   */
+  public count(where: any = undefined) {
+    let method: string = "GET";
+
+    let url: string = this.getPath() + "/Deployments/count";
+    let urlParams: any = {
+    };
+
+    let params: any = {};
+    if (where !== undefined) {
+      params.where = where;
+    }
+
+    let result = this.request(method, url, urlParams, params);
+    return result;
+  }
+
+  /**
+   * Update attributes for a model instance and persist it into the data source.
+   *
+   * @param any id PersistedModel id
+   *
+   * @param object data Request data.
+   *
+   * This method expects a subset of model properties as request parameters.
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `Deployment` object.)
+   * </em>
+   */
+  public updateAttributes(id: any, data: any = undefined) {
+    let method: string = "PUT";
+
+    let url: string = this.getPath() + "/Deployments/:id";
+    let urlParams: any = {
+      id: id
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params, data);
+    return result;
+  }
+
+  /**
+   * Create a change stream.
+   *
+   * @param object data Request data.
+   *
+   *  - `options` – `{object}` - 
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * Data properties:
+   *
+   *  - `changes` – `{ReadableStream}` - 
+   */
+  public createChangeStream(options: any = undefined) {
+    let method: string = "POST";
+
+    let url: string = this.getPath() + "/Deployments/change-stream";
+    let urlParams: any = {
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params, options);
+    return result;
+  }
+
+
+  /**
+   * The name of the model represented by this $resource,
+   * i.e. `Deployment`.
+   */
+  public getModelName() {
+    return "Deployment";
+  }
+}
+
+/**
+ * Api for the `StudentNote` model.
+ */
+@Injectable()
+export class StudentNoteApi extends BaseLoopBackApi {
+
+  constructor(
+    @Inject(Http) http: Http,
+    @Optional() @Inject(ErrorHandler) errorHandler: ErrorHandler
+  ) {
+    super(http, errorHandler);
+  }
+
+  /**
+   * Fetches belongsTo relation student.
+   *
+   * @param any id PersistedModel id
+   *
+   * @param boolean refresh 
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `StudentNote` object.)
+   * </em>
+   */
+  public __get__student(id: any, refresh: boolean = undefined) {
+    let method: string = "GET";
+
+    let url: string = this.getPath() + "/StudentNotes/:id/student";
+    let urlParams: any = {
+      id: id
+    };
+
+    let params: any = {};
+    if (refresh !== undefined) {
+      params.refresh = refresh;
+    }
+
+    let result = this.request(method, url, urlParams, params);
+    return result;
+  }
+
+  /**
+   * Fetches belongsTo relation author.
+   *
+   * @param any id PersistedModel id
+   *
+   * @param boolean refresh 
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `StudentNote` object.)
+   * </em>
+   */
+  public __get__author(id: any, refresh: boolean = undefined) {
+    let method: string = "GET";
+
+    let url: string = this.getPath() + "/StudentNotes/:id/author";
+    let urlParams: any = {
+      id: id
+    };
+
+    let params: any = {};
+    if (refresh !== undefined) {
+      params.refresh = refresh;
+    }
+
+    let result = this.request(method, url, urlParams, params);
+    return result;
+  }
+
+  /**
+   * Create a new instance of the model and persist it into the data source.
+   *
+   * @param object data Request data.
+   *
+   * This method expects a subset of model properties as request parameters.
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `StudentNote` object.)
+   * </em>
+   */
+  public create(data: any = undefined) {
+    let method: string = "POST";
+
+    let url: string = this.getPath() + "/StudentNotes";
+    let urlParams: any = {
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params, data);
+    return result;
+  }
+
+  /**
+   * Create a new instance of the model and persist it into the data source.
+   *
+   * @param object data Request data.
+   *
+   * This method expects a subset of model properties as request parameters.
+   *
+   * @returns object[] An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `StudentNote` object.)
+   * </em>
+   */
+  public createMany(data: any = undefined) {
+    let method: string = "POST";
+
+    let url: string = this.getPath() + "/StudentNotes";
+    let urlParams: any = {
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params, data);
+    return result;
+  }
+
+  /**
+   * Update an existing model instance or insert a new one into the data source.
+   *
+   * @param object data Request data.
+   *
+   * This method expects a subset of model properties as request parameters.
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `StudentNote` object.)
+   * </em>
+   */
+  public upsert(data: any = undefined) {
+    let method: string = "PUT";
+
+    let url: string = this.getPath() + "/StudentNotes";
+    let urlParams: any = {
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params, data);
+    return result;
+  }
+
+  /**
+   * Check whether a model instance exists in the data source.
+   *
+   * @param any id Model id
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * Data properties:
+   *
+   *  - `exists` – `{boolean}` - 
+   */
+  public exists(id: any) {
+    let method: string = "GET";
+
+    let url: string = this.getPath() + "/StudentNotes/:id/exists";
+    let urlParams: any = {
+      id: id
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params);
+    return result;
+  }
+
+  /**
+   * Find a model instance by id from the data source.
+   *
+   * @param any id Model id
+   *
+   * @param object filter Filter defining fields and include
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `StudentNote` object.)
+   * </em>
+   */
+  public findById(id: any, filter: LoopBackFilterInterface = undefined) {
+    let method: string = "GET";
+
+    let url: string = this.getPath() + "/StudentNotes/:id";
+    let urlParams: any = {
+      id: id
+    };
+
+    let params: any = {};
+    if (filter !== undefined) {
+      params.filter = filter;
+    }
+
+    let result = this.request(method, url, urlParams, params);
+    return result;
+  }
+
+  /**
+   * Find all instances of the model matched by filter from the data source.
+   *
+   * @param object filter Filter defining fields, where, include, order, offset, and limit
+   *
+   * @returns object[] An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `StudentNote` object.)
+   * </em>
+   */
+  public find(filter: LoopBackFilterInterface = undefined) {
+    let method: string = "GET";
+
+    let url: string = this.getPath() + "/StudentNotes";
+    let urlParams: any = {
+    };
+
+    let params: any = {};
+    if (filter !== undefined) {
+      params.filter = filter;
+    }
+
+    let result = this.request(method, url, urlParams, params);
+    return result;
+  }
+
+  /**
+   * Find first instance of the model matched by filter from the data source.
+   *
+   * @param object filter Filter defining fields, where, include, order, offset, and limit
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `StudentNote` object.)
+   * </em>
+   */
+  public findOne(filter: LoopBackFilterInterface = undefined) {
+    let method: string = "GET";
+
+    let url: string = this.getPath() + "/StudentNotes/findOne";
+    let urlParams: any = {
+    };
+
+    let params: any = {};
+    if (filter !== undefined) {
+      params.filter = filter;
+    }
+
+    let result = this.request(method, url, urlParams, params);
+    return result;
+  }
+
+  /**
+   * Update instances of the model matched by where from the data source.
+   *
+   * @param object where Criteria to match model instances
+   *
+   * @param object data Request data.
+   *
+   * This method expects a subset of model properties as request parameters.
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * The number of instances updated
+   */
+  public updateAll(where: any = undefined, data: any = undefined) {
+    let method: string = "POST";
+
+    let url: string = this.getPath() + "/StudentNotes/update";
+    let urlParams: any = {
+    };
+
+    let params: any = {};
+    if (where !== undefined) {
+      params.where = where;
+    }
+
+    let result = this.request(method, url, urlParams, params, data);
+    return result;
+  }
+
+  /**
+   * Delete a model instance by id from the data source.
+   *
+   * @param any id Model id
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `StudentNote` object.)
+   * </em>
+   */
+  public deleteById(id: any) {
+    let method: string = "DELETE";
+
+    let url: string = this.getPath() + "/StudentNotes/:id";
+    let urlParams: any = {
+      id: id
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params);
+    return result;
+  }
+
+  /**
+   * Count instances of the model matched by where from the data source.
+   *
+   * @param object where Criteria to match model instances
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * Data properties:
+   *
+   *  - `count` – `{number}` - 
+   */
+  public count(where: any = undefined) {
+    let method: string = "GET";
+
+    let url: string = this.getPath() + "/StudentNotes/count";
+    let urlParams: any = {
+    };
+
+    let params: any = {};
+    if (where !== undefined) {
+      params.where = where;
+    }
+
+    let result = this.request(method, url, urlParams, params);
+    return result;
+  }
+
+  /**
+   * Update attributes for a model instance and persist it into the data source.
+   *
+   * @param any id PersistedModel id
+   *
+   * @param object data Request data.
+   *
+   * This method expects a subset of model properties as request parameters.
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `StudentNote` object.)
+   * </em>
+   */
+  public updateAttributes(id: any, data: any = undefined) {
+    let method: string = "PUT";
+
+    let url: string = this.getPath() + "/StudentNotes/:id";
+    let urlParams: any = {
+      id: id
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params, data);
+    return result;
+  }
+
+  /**
+   * Create a change stream.
+   *
+   * @param object data Request data.
+   *
+   *  - `options` – `{object}` - 
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * Data properties:
+   *
+   *  - `changes` – `{ReadableStream}` - 
+   */
+  public createChangeStream(options: any = undefined) {
+    let method: string = "POST";
+
+    let url: string = this.getPath() + "/StudentNotes/change-stream";
+    let urlParams: any = {
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params, options);
+    return result;
+  }
+
+  /**
+   * Find a related item by id for studentNotes.
+   *
+   * @param any id PersistedModel id
+   *
+   * @param any fk Foreign key for studentNotes
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `StudentNote` object.)
+   * </em>
+   */
+  public __findById__Student__studentNotes(id: any, fk: any) {
+    let method: string = "GET";
+
+    let url: string = this.getPath() + "/Students/:id/studentNotes/:fk";
+    let urlParams: any = {
+      id: id,
+      fk: fk
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params);
+    return result;
+  }
+
+  /**
+   * Delete a related item by id for studentNotes.
+   *
+   * @param any id PersistedModel id
+   *
+   * @param any fk Foreign key for studentNotes
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * This method returns no data.
+   */
+  public __destroyById__Student__studentNotes(id: any, fk: any) {
+    let method: string = "DELETE";
+
+    let url: string = this.getPath() + "/Students/:id/studentNotes/:fk";
+    let urlParams: any = {
+      id: id,
+      fk: fk
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params);
+    return result;
+  }
+
+  /**
+   * Update a related item by id for studentNotes.
+   *
+   * @param any id PersistedModel id
+   *
+   * @param any fk Foreign key for studentNotes
+   *
+   * @param object data Request data.
+   *
+   * This method expects a subset of model properties as request parameters.
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `StudentNote` object.)
+   * </em>
+   */
+  public __updateById__Student__studentNotes(id: any, fk: any, data: any = undefined) {
+    let method: string = "PUT";
+
+    let url: string = this.getPath() + "/Students/:id/studentNotes/:fk";
+    let urlParams: any = {
+      id: id,
+      fk: fk
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params, data);
+    return result;
+  }
+
+  /**
+   * Queries studentNotes of Student.
+   *
+   * @param any id PersistedModel id
+   *
+   * @param object filter 
+   *
+   * @returns object[] An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `StudentNote` object.)
+   * </em>
+   */
+  public __get__Student__studentNotes(id: any, filter: LoopBackFilterInterface = undefined) {
+    let method: string = "GET";
+
+    let url: string = this.getPath() + "/Students/:id/studentNotes";
+    let urlParams: any = {
+      id: id
+    };
+
+    let params: any = {};
+    if (filter !== undefined) {
+      params.filter = filter;
+    }
+
+    let result = this.request(method, url, urlParams, params);
+    return result;
+  }
+
+  /**
+   * Creates a new instance in studentNotes of this model.
+   *
+   * @param any id PersistedModel id
+   *
+   * @param object data Request data.
+   *
+   * This method expects a subset of model properties as request parameters.
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `StudentNote` object.)
+   * </em>
+   */
+  public __create__Student__studentNotes(id: any, data: any = undefined) {
+    let method: string = "POST";
+
+    let url: string = this.getPath() + "/Students/:id/studentNotes";
+    let urlParams: any = {
+      id: id
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params, data);
+    return result;
+  }
+
+  /**
+   * Creates a new instance in studentNotes of this model.
+   *
+   * @param any id PersistedModel id
+   *
+   * @param object data Request data.
+   *
+   * This method expects a subset of model properties as request parameters.
+   *
+   * @returns object[] An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `StudentNote` object.)
+   * </em>
+   */
+  public __createMany__Student__studentNotes(id: any, data: any = undefined) {
+    let method: string = "POST";
+
+    let url: string = this.getPath() + "/Students/:id/studentNotes";
+    let urlParams: any = {
+      id: id
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params, data);
+    return result;
+  }
+
+  /**
+   * Deletes all studentNotes of this model.
+   *
+   * @param any id PersistedModel id
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * This method returns no data.
+   */
+  public __delete__Student__studentNotes(id: any) {
+    let method: string = "DELETE";
+
+    let url: string = this.getPath() + "/Students/:id/studentNotes";
+    let urlParams: any = {
+      id: id
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params);
+    return result;
+  }
+
+  /**
+   * Counts studentNotes of Student.
+   *
+   * @param any id PersistedModel id
+   *
+   * @param object where Criteria to match model instances
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * Data properties:
+   *
+   *  - `count` – `{number}` - 
+   */
+  public __count__Student__studentNotes(id: any, where: any = undefined) {
+    let method: string = "GET";
+
+    let url: string = this.getPath() + "/Students/:id/studentNotes/count";
+    let urlParams: any = {
+      id: id
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params);
+    return result;
+  }
+
+  /**
+   * Find a related item by id for studentNotes.
+   *
+   * @param any id User id
+   *
+   * @param any fk Foreign key for studentNotes
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `StudentNote` object.)
+   * </em>
+   */
+  public __findById__Teacher__studentNotes(id: any, fk: any) {
+    let method: string = "GET";
+
+    let url: string = this.getPath() + "/Teachers/:id/studentNotes/:fk";
+    let urlParams: any = {
+      id: id,
+      fk: fk
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params);
+    return result;
+  }
+
+  /**
+   * Delete a related item by id for studentNotes.
+   *
+   * @param any id User id
+   *
+   * @param any fk Foreign key for studentNotes
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * This method returns no data.
+   */
+  public __destroyById__Teacher__studentNotes(id: any, fk: any) {
+    let method: string = "DELETE";
+
+    let url: string = this.getPath() + "/Teachers/:id/studentNotes/:fk";
+    let urlParams: any = {
+      id: id,
+      fk: fk
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params);
+    return result;
+  }
+
+  /**
+   * Update a related item by id for studentNotes.
+   *
+   * @param any id User id
+   *
+   * @param any fk Foreign key for studentNotes
+   *
+   * @param object data Request data.
+   *
+   * This method expects a subset of model properties as request parameters.
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `StudentNote` object.)
+   * </em>
+   */
+  public __updateById__Teacher__studentNotes(id: any, fk: any, data: any = undefined) {
+    let method: string = "PUT";
+
+    let url: string = this.getPath() + "/Teachers/:id/studentNotes/:fk";
+    let urlParams: any = {
+      id: id,
+      fk: fk
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params, data);
+    return result;
+  }
+
+  /**
+   * Queries studentNotes of Teacher.
+   *
+   * @param any id User id
+   *
+   * @param object filter 
+   *
+   * @returns object[] An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `StudentNote` object.)
+   * </em>
+   */
+  public __get__Teacher__studentNotes(id: any, filter: LoopBackFilterInterface = undefined) {
+    let method: string = "GET";
+
+    let url: string = this.getPath() + "/Teachers/:id/studentNotes";
+    let urlParams: any = {
+      id: id
+    };
+
+    let params: any = {};
+    if (filter !== undefined) {
+      params.filter = filter;
+    }
+
+    let result = this.request(method, url, urlParams, params);
+    return result;
+  }
+
+  /**
+   * Creates a new instance in studentNotes of this model.
+   *
+   * @param any id User id
+   *
+   * @param object data Request data.
+   *
+   * This method expects a subset of model properties as request parameters.
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `StudentNote` object.)
+   * </em>
+   */
+  public __create__Teacher__studentNotes(id: any, data: any = undefined) {
+    let method: string = "POST";
+
+    let url: string = this.getPath() + "/Teachers/:id/studentNotes";
+    let urlParams: any = {
+      id: id
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params, data);
+    return result;
+  }
+
+  /**
+   * Creates a new instance in studentNotes of this model.
+   *
+   * @param any id User id
+   *
+   * @param object data Request data.
+   *
+   * This method expects a subset of model properties as request parameters.
+   *
+   * @returns object[] An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * <em>
+   * (The remote method definition does not provide any description.
+   * This usually means the response is a `StudentNote` object.)
+   * </em>
+   */
+  public __createMany__Teacher__studentNotes(id: any, data: any = undefined) {
+    let method: string = "POST";
+
+    let url: string = this.getPath() + "/Teachers/:id/studentNotes";
+    let urlParams: any = {
+      id: id
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params, data);
+    return result;
+  }
+
+  /**
+   * Deletes all studentNotes of this model.
+   *
+   * @param any id User id
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * This method returns no data.
+   */
+  public __delete__Teacher__studentNotes(id: any) {
+    let method: string = "DELETE";
+
+    let url: string = this.getPath() + "/Teachers/:id/studentNotes";
+    let urlParams: any = {
+      id: id
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params);
+    return result;
+  }
+
+  /**
+   * Counts studentNotes of Teacher.
+   *
+   * @param any id User id
+   *
+   * @param object where Criteria to match model instances
+   *
+   * @returns object An empty reference that will be
+   *   populated with the actual data once the response is returned
+   *   from the server.
+   *
+   * Data properties:
+   *
+   *  - `count` – `{number}` - 
+   */
+  public __count__Teacher__studentNotes(id: any, where: any = undefined) {
+    let method: string = "GET";
+
+    let url: string = this.getPath() + "/Teachers/:id/studentNotes/count";
+    let urlParams: any = {
+      id: id
+    };
+
+    let params: any = {};
+
+    let result = this.request(method, url, urlParams, params);
+    return result;
+  }
+
+
+  /**
+   * The name of the model represented by this $resource,
+   * i.e. `StudentNote`.
+   */
+  public getModelName() {
+    return "StudentNote";
   }
 }
 
