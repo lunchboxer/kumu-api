@@ -1,7 +1,7 @@
 body {
   padding-top: 1em;
-  background-color: #eee;
-  color: #777;
+  background-color: #f2f2f2;
+  color: #666;
 }
 
 h1,
@@ -23,6 +23,9 @@ nav a:hover {
   margin: 0;
   padding: 0.1em 0.4em;
   text-decoration: none;
+}
+nav a:focus {
+  text-decoration: none;
   outline: none;
 }
 
@@ -35,10 +38,13 @@ a.router-link-active:hover {
   cursor: default;
   pointer-events: none;
   font-weight: bold;
-  outline: none;
+}
+a.router-link-active:focus {
+  cursor: default;
+  outline: 0;
 }
 
-#loading {
+.loading {
   color: #aaa;
   font-size: 2em;
 }

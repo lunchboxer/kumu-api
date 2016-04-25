@@ -8,7 +8,7 @@
     "nodemon": "nodemon",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
-    "typings": "typings",
+    "typings": "typings install",
     "postinstall": "typings install && npm run build",
     "lb-ng": "lb-ng ./server/server.js ./client/src/app/lb-services.ts -l angular2",
     "build": "gulp copylibs",
@@ -38,7 +38,6 @@
   "devDependencies": {
     "concurrently": "^2.0.0",
     "eslint": "^2.8.0",
-    "eslint-config-airbnb": "^7.0.0",
     "eslint-config-standard": "^5.1.0",
     "eslint-plugin-promise": "^1.1.0",
     "eslint-plugin-standard": "^1.3.2",
@@ -49,7 +48,7 @@
     "loopback-sdk-angular": "github:qeti/loopback-sdk-angular#188-angular2-support",
     "loopback-sdk-angular-cli": "github:qeti/loopback-sdk-angular-cli#37-angular2-support",
     "typescript": "^1.8.10",
-    "typings": "^0.7.12"
+    "typings": "^0.8.1"
   },
   "repository": {
     "type": "git",
