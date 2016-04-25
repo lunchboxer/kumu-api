@@ -3,17 +3,34 @@ body {
   background-color: #eee;
   color: #777;
 }
-
 .loading {
   padding: 1em 1em;
   color: #aaa;
   font-size: 2em;
 }
-
 a:focus {
   text-decoration: none;
   outline: none;
 }
 .main-content {
   margin-top: 2em;
+}
+
+/* medium+ screen sizes */
+
+@media (min-width:692px) {
+  .desktop-only {
+    display: block !important;
+  }
+}
+
+/* small screen sizes */
+
+@media (max-width: 691px) {
+  .mobile-only {
+    display: block !important;
+  }
+  .desktop-only {
+    display: none !important;
+  }
 }

@@ -8,12 +8,12 @@
       "themes": "src/themes/"
     },
     "output": {
-      "packaged": "../../build/lib/",
-      "uncompressed": "../../build/semantic-ui/components/",
-      "compressed": "../../build/semantic-ui/components/",
-      "themes": "../../build/semantic-ui/themes/"
+      "packaged": "../../build/lib/semantic-ui/",
+      "uncompressed": "../../build/lib/semantic-ui/components/",
+      "compressed": "../../build/lib/semantic-ui/components/",
+      "themes": "../../build/lib/semantic-ui/themes/"
     },
-    "clean": "../../build/semantic-ui/"
+    "clean": "../../build/lib/semantic-ui/"
   },
   "permission": false,
   "rtl": "No",

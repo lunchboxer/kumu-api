@@ -1,21 +1,17 @@
-<div class="ui vertical interted sidebar menu left">
-<a class="active item">About</a>
+
+  <div title="FixedNavMenu" class="ui pointing secondary large menu">
+
+    <a class="item" [routerLink]="['About']">About</a>
+    <a class="item" [routerLink]="['Students']">Students</a>
+    <a class="item" [routerLink]="['Classes']">Classes</a>
+
+    <a class="right item">Log in</a>
+
+  </div>
 
 
-</div>
+<div class="ui container main-content">
 
-<div class="ui inverted main fixed menu">
-  <a class="item active" [routerLink]="['About']">About</a>
-  <a class="item" [routerLink]="['Students']">Students</a>
-  <a class="item" [routerLink]="['Classes']">Classes</a>
-  <a class="item" [routerLink]="['Lessons']">Lessons</a>
-
-  <a class="right item">Log in</a>
-
-</div>
-
-<div class="pusher main-content">
-  <div class="ui container">
   <router-outlet></router-outlet>
-</div>
+
 </div>

@@ -1,9 +1,10 @@
-import { HostBinding, Input, Directive, Component } from 'angular2/core';
+import { HostBinding, Input, Directive, Component, OnInit } from 'angular2/core';
 import { Router, RouteConfig, Instruction, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
 import { AboutComponent } from './about.component';
 import { StudentsComponent } from './students.component';
 import { ClassesComponent } from './classes.component';
 import { LessonsComponent } from './lessons.component';
+/*import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";*/
 
 @Directive({
   selector: '[routerLink]'
@@ -29,11 +30,15 @@ export class RouterLinkReplaceClass {
   get isRouteActive(): boolean {
     return this._navigationInstruction ? this._router.isRouteActive(this._navigationInstruction) : null;
   }
+
 }
 @Component({
   selector: 'app',
   templateUrl: './app/app.html',
-  directives: [ROUTER_DIRECTIVES, RouterLinkReplaceClass],
+  directives: [
+    ROUTER_DIRECTIVES,
+    RouterLinkReplaceClass
+  ],
   providers: [ROUTER_PROVIDERS]
 })
 
@@ -49,5 +54,7 @@ export class RouterLinkReplaceClass {
   { path: '/lessons', name: 'Lessons', component: LessonsComponent },
 ])
 
-export class AppComponent {
+export class AppComponent implements OnInit {
+  ngOnInit() {
+  }
 }
