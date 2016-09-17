@@ -12,8 +12,9 @@ gulp.task('copylibs', function () {
       'node_modules/angular2/bundles/angular2.dev.js',
       'node_modules/angular2/bundles/router.dev.js',
       'node_modules/angular2/bundles/http.dev.js',
-      'node_modules/skeleton-css/css/normalize.css',
-      'node_modules/skeleton-css/css/skeleton.css'
+      'node_modules/ng2-bootstrap/bundles/ng2-bootstrap.min.js',
+      'node_modules/bootstrap/dist/css/bootstrap.min.css',
+      'node_modules/moment/moment.js'
     ])
     .pipe(gulp.dest('client/build/lib/'))
 })

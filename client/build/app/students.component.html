@@ -1,9 +1,14 @@
 <h2>Students</h2>
 <p>There are <strong>{{count}}</strong> students in records.</p>
 
-<label for="searchStudents">Search</label>
-<input type="text" name="searchStudents">
-<table class="u-full-width">
+<div class="input-group">
+     <input type="text" class="form-control" placeholder="Name">
+     <span class="input-group-btn">
+       <button class="btn btn-primary" type="button">Search</button>
+     </span>
+</div>
+
+<table class="table table-hover">
   <thead>
     <tr>
       <th>English Name</th>
