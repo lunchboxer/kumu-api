@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node .",
     "posttest": "nsp check",
-    "build:sdk": "./node_modules/.bin/lb-sdk server/server.js ../kumu-ng/client/src/app/shared/sdk"
+    "build:sdk": "./node_modules/.bin/lb-sdk server/server.js ../kumu-ng/src/app/shared/sdk"
   },
   "dependencies": {
     "bcrypt": "^0.8.7",
