@@ -1,3 +1,5 @@
+'use strict'
+
 module.exports = function (Term) {
   // Make sure the time parts are zero
   Term.observe('before save', function atMidnight (ctx, next) {

@@ -1,4 +1,6 @@
-module.exports = function (Deployment) {
+'use strict'
+
+module.exports = function(Deployment) {
   Deployment.validatesInclusionOf('id', {in: [1],
     message: 'Deployment can only have one configuration.'
   })

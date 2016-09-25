@@ -5,7 +5,7 @@
   },
   "localMongo": {
     "host": "localhost",
-    "database": "schooltools",
+    "database": "kumu",
     "password": "",
     "name": "localMongo",
     "user": "",

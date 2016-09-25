@@ -1,3 +1,5 @@
+'use strict'
+
 module.exports = function (LessonNote) {
   LessonNote.beforeRemote('create', function (context, user, next) {
     var req = context.req

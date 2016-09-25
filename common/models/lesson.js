@@ -1,3 +1,5 @@
-module.exports = function(Lesson) {
+'use strict'
 
-};
+module.exports = function (Lesson) {
+
+}

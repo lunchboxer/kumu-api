@@ -1,2 +1,4 @@
-module.exports = function (Class) {
+'use strict'
+
+module.exports = function(Class) {
 }

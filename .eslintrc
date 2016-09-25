@@ -1,0 +1,12 @@
+{
+  "extends": "loopback",
+  "comma-dangle": "never",
+  "rules": {
+    "semi": ["error", "never"],
+    "no-unexpected-multiline": "error",
+    "no-multiple-empty-lines": "error",
+    "comma-dangle": ["error", "never"],
+    "space-before-function-paren": ["error", "always"],
+    "object-curly-spacing": ["error", "always"]
+  }
+}

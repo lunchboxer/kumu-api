@@ -1,3 +1,5 @@
+'use strict'
+
 module.exports = function (StudentNote) {
   StudentNote.observe('before save', function addTimestamp (ctx, next) {
     if (ctx.instance) {

@@ -1,8 +1,10 @@
+'use strict'
+
 var pinyin = require('pinyin')
 
 module.exports = function (Student) {
   // avoid pointless, case-sensitivity validation errors
-  Student.observe('before save', function uppperCaseGender (ctx, next) {
+  Student.observe('before save', function upperCaseGender (ctx, next) {
     if (ctx.instance) {
       ctx.instance.gender = ctx.instance.gender.toUpperCase()
     } else {

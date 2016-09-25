@@ -1,3 +1,4 @@
+'use strict'
 module.exports = function (ScheduleItem) {
   // Since we only care about the time, let's zero the date parts
   ScheduleItem.observe('before save', function GoBackToRunnymede (ctx, next) {
@@ -11,7 +12,8 @@ module.exports = function (ScheduleItem) {
     next()
   })
 
-  ScheduleItem.validatesInclusionOf('day', { in: [0, 1, 2, 3, 4, 5, 6],
+  ScheduleItem.validatesInclusionOf('day', {
+    in: [0, 1, 2, 3, 4, 5, 6],
     message: 'Day should be 0-6, where 0 is Sunday and 6 is Saturday.'
   })
   ScheduleItem.validate('end', afterStart, {

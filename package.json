@@ -1,59 +1,36 @@
 {
-  "name": "kumu",
-  "version": "0.0.1",
-  "license": "MIT",
+  "name": "kumu-api",
+  "version": "0.0.2",
   "main": "server/server.js",
   "scripts": {
-    "start": "concurrently \"npm run tsc:w\" \"npm run nodemon\"",
-    "nodemon": "nodemon",
-    "tsc": "tsc",
-    "tsc:w": "tsc -w",
-    "typings": "typings install",
-    "lb-ng": "lb-ng ./server/server.js ./client/src/app/lb-services.ts -l angular2",
-    "build": "gulp copylibs",
-    "console": "loopback-console .",
-    "postinstall": "typings install && npm run build"
+    "start": "node .",
+    "posttest": "nsp check",
+    "build:sdk": "./node_modules/.bin/lb-sdk server/server.js ../kumu-ng/client/src/app/shared/sdk"
   },
   "dependencies": {
-    "angular2": "2.0.0-beta.16",
     "bcrypt": "^0.8.7",
-    "bootstrap": "^4.0.0-alpha.2",
-    "compression": "^1.6.2",
+    "compression": "^1.0.3",
     "cors": "^2.5.2",
-    "es6-promise": "^3.2.1",
-    "es6-shim": "^0.35.1",
-    "loopback": "^2.29.0",
-    "loopback-boot": "^2.18.1",
-    "loopback-component-explorer": "^2.5.0",
+    "helmet": "^2.2.0",
+    "loopback": "^2.30.0",
+    "loopback-boot": "^2.6.5",
+    "loopback-component-explorer": "^2.4.0",
     "loopback-connector-mongodb": "^1.15.2",
-    "loopback-datasource-juggler": "^2.46.1",
-    "ng2-bootstrap": "^1.0.17",
-    "nodemon": "^1.9.2",
-    "pinyin": "^2.7.3",
-    "reflect-metadata": "0.1.2",
-    "rxjs": "5.0.0-beta.2",
+    "loopback-datasource-juggler": "^2.39.0",
+    "pinyin": "^2.8.0",
     "serve-favicon": "^2.0.1",
-    "systemjs": "^0.19.31",
-    "zone.js": "^0.6.11"
+    "strong-error-handler": "^1.0.1"
   },
   "devDependencies": {
-    "concurrently": "^2.1.0",
-    "eslint": "^2.12.0",
-    "eslint-config-standard": "^5.3.1",
-    "eslint-plugin-promise": "^1.3.2",
-    "eslint-plugin-standard": "^1.3.2",
-    "gulp": "^3.9.0",
-    "gulp-watch": "^4.3.6",
-    "gulp-webserver": "^0.9.1",
-    "loopback-console": "^0.2.2",
-    "loopback-sdk-angular": "github:qeti/loopback-sdk-angular#188-angular2-support",
-    "loopback-sdk-angular-cli": "github:qeti/loopback-sdk-angular-cli#37-angular2-support",
-    "typescript": "^1.8.10",
-    "typings": "^1.1.0"
+    "@mean-expert/loopback-sdk-builder": "^2.0.10",
+    "eslint": "^3.6.0",
+    "eslint-config-loopback": "^4.0.0",
+    "nsp": "^2.1.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lunchboxer/kumu.git"
+    "url": "https://github.com/lunchboxer/kumu-api.git"
   },
+  "license": "MIT",
   "description": "kumu"
 }
