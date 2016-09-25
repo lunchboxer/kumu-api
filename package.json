@@ -32,5 +32,5 @@
     "url": "https://github.com/lunchboxer/kumu-api.git"
   },
   "license": "MIT",
-  "description": "kumu"
+  "description": "An API server managing data for teachers"
 }
