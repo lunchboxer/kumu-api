@@ -9,23 +9,23 @@
   },
   "dependencies": {
     "bcrypt": "^0.8.7",
-    "compression": "^1.0.3",
-    "cors": "^2.5.2",
-    "helmet": "^2.2.0",
-    "loopback": "^2.30.0",
-    "loopback-boot": "^2.6.5",
-    "loopback-component-explorer": "^2.4.0",
+    "compression": "^1.6.2",
+    "cors": "^2.8.1",
+    "helmet": "^2.3.0",
+    "loopback": "^2.34.1",
+    "loopback-boot": "^2.22.0",
+    "loopback-component-explorer": "^2.6.0",
     "loopback-connector-mongodb": "^1.15.2",
-    "loopback-datasource-juggler": "^2.39.0",
+    "loopback-datasource-juggler": "^2.51.0",
     "pinyin": "^2.8.0",
-    "serve-favicon": "^2.0.1",
-    "strong-error-handler": "^1.0.1"
+    "serve-favicon": "^2.3.0",
+    "strong-error-handler": "^1.1.0"
   },
   "devDependencies": {
-    "@mean-expert/loopback-sdk-builder": "^2.0.10",
-    "eslint": "^3.6.0",
+    "@mean-expert/loopback-sdk-builder": "^2.1.0-beta.9",
+    "eslint": "^3.7.1",
     "eslint-config-loopback": "^4.0.0",
-    "nsp": "^2.1.0"
+    "nsp": "^2.6.2"
   },
   "repository": {
     "type": "git",
